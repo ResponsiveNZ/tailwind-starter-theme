@@ -1,0 +1,7 @@
+name: 'Tailwind Starter'
+description: 'TailwindCSS starter theme. Includes Alpine.js, Glider.js and Sal.js'
+author: Responsive
+homepage: 'https://responsiveweb.nz'
+code: tailwindstarter
+previewImage: assets/dist/images/theme-preview.png
+form: fields.yaml

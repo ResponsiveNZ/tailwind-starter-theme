@@ -1,0 +1,15 @@
+.section {
+    @apply py-12;
+}
+
+.section-title {
+    @apply mb-3 text-4xl font-bold;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        height: 18px;
+        width: 18px;
+        @apply bg-primary rounded-full mr-3;
+    }
+}

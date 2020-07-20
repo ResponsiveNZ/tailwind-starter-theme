@@ -1,0 +1,27 @@
+description = "Blog page template"
+
+[seoTags]
+==
+<!doctype html>
+<html lang="en">
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+
+    <body class="font-body">
+
+        {% partial 'site/header' %}
+
+        <main class="container py-20">
+
+            {% page %}
+
+        </main>
+
+        {% partial 'site/footer' %}
+
+        {% partial 'site/scripts' %}
+
+    </body>
+
+</html>

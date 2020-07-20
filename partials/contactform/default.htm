@@ -1,0 +1,34 @@
+<form data-request="{{ contactForm }}::onFormSubmit" class="w-full md:w-3/4 form-underline" data-sal="slide-up" data-sal-easing="ease-in-cubic" data-sal-delay="100" data-request-validate>
+
+    {{ form_token() }}
+
+    <div id="{{ contactForm }}_forms_flash"></div>
+
+    <div class="mt-6 input-group">
+        <label class="sr-only">Name</label>
+        <input id="name" name="name" class="input-field w-full" type="text" placeholder="Your name" aria-label="Full name">
+        <div data-validate-for="name" class="error-message mt-2 text-sm font-light text-error"></div>
+    </div>
+
+    <div class="mt-5 input-group">
+        <label class="sr-only">Email</label>
+        <input id="email" name="email" class="input-field w-full" type="email" placeholder="Your email" aria-label="Email">
+        <div data-validate-for="email" class="error-message mt-2 text-sm text-error"></div>
+    </div>
+
+    <div class="mt-5 input-group">
+        <label class="sr-only">Message</label>
+        <textarea id="message" name="message" class="input-field w-full" name="message" placeholder="Your message" aria-label="Message"></textarea>
+        <div data-validate-for="message" class="error-message text-sm text-error"></div>
+    </div>
+
+    {% partial '@recaptcha' %}
+
+    <div class="mt-5">
+      <span class="rounded-md shadow-sm">
+        <button id="submit" type="submit" class="btn btn-primary" data-attach-loading>
+          Send Message
+        </button>
+      </span>
+    </div>
+</form>

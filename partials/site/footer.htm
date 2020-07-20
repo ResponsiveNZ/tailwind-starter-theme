@@ -1,0 +1,72 @@
+<footer class="bg-tertiary text-white">
+    {% if this.theme.company_contact_title or this.theme.social_title %}
+    <div class="container section mx-auto py-12">
+        <div class="w-full mb-6 md:mb-0 px-4 md:w-3/4">
+            <h4 class="text-lg font-bold mb-4">{{this.theme.company_contact_title }}</h4>
+            <ul class="text-sm">
+                <li class="mb-2">
+                    <div class="flex">
+                        <i class="mr-4 text-white text-2xl {{ this.theme.company_address_icon }}"></i>
+                        <div>
+                            <p class="text-sm w-full">{{ this.theme.company_address }}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-2">
+                    <div class="flex">
+                        <i class="mr-4 text-white text-2xl {{ this.theme.company_contact_number_icon }}"></i>
+                        <div>
+                            <p class="text-sm w-full"><a href="tel:{{ this.theme.company_contact_number }}">{{ this.theme.company_contact_number }}</a></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="mb-2 md:mb-0">
+                    <div class="flex">
+                        <i class="mr-4 text-white text-2xl {{ this.theme.company_email_icon }}"></i>
+                        <div>
+                            <p class="text-sm w-full"><a href="mailto:{{ this.theme.company_email }}">{{ this.theme.company_email }}</a></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="w-full mb-6 md:mb-0 px-4 md:w-3/4">
+            <h4 class="text-lg font-bold mb-4">Menu Links</h4>
+            <ul class="text-sm">
+                <li class="mb-2"><a class="hover:text-primary" href="#about">About</a></li>
+                <li class="mb-2"><a class="hover:text-primary" href="#services">Services</a></li>
+                <li class="mb-2"><a class="hover:text-primary" href="#pricing">Pricing</a></li>
+            </ul>
+        </div>
+        <div class="w-full mb-6 md:mb-0 px-4 md:w-3/4">
+            <h4 class="text-lg font-bold mb-4">{{ this.theme.social_title }}</h4>
+            <ul class="flex text-sm">
+                <li class="mb-2 mr-4">
+                    <a href="{{ this.theme.social_facebook }}" target="_blank">
+                        <img class="w-6 h-6" src="{{ 'assets/dist/images/facebook.svg'|theme }}" alt="Twitter Icon">
+                    </a>
+                </li>
+                <li class="mb-2 mr-4">
+                    <a href="{{ this.theme.social_twitter }}" target="_blank">
+                        <img class="w-6 h-6" src="{{ 'assets/dist/images/twitter.svg'|theme }}" alt="Twitter Icon">
+                    </a>
+                </li>
+                <li class="mb-2 mr-4">
+                    <a href="{{ this.theme.social_instagram }}" target="_blank">
+                        <img class="w-6 h-6" src="{{ 'assets/dist/images/instagram.svg'|theme }}" alt="Instagram Icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endif %}
+
+    <section id="copyright" class="py-4 px-2 bg-gray-600">
+        <div class="flex content-center justify-center h-full">
+            <div class="text-xs">
+                Copyright &copy; {{ "now"|date("Y") }} &middot; {{ this.theme.website_name }} &middot; Crafted with &hearts; by  <a href="https://responsiveweb.nz" class="hover:text-primary" target="_blank">Responsive</a>
+            </div>
+        </div>
+    </section>
+
+</footer>

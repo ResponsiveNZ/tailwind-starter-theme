@@ -1,0 +1,22 @@
+title = 404
+url = "/404"
+layout = "system"
+description = "This is the 404 error page"
+meta_title = "404 page"
+meta_description = "404 error page"
+is_hidden = 0
+robot_index = "noindex"
+robot_follow = "nofollow"
+==
+<div class="h-screen grid grid-cols-1 lg:grid-cols-2">
+    <div class="flex items-center justify-center">
+      <div class="px-12 py-8">
+        <h1 class="text-4xl mb-4">Oops... You might be a little lost.</h1>
+        <p class="mb-4">We can't find the page you are looking for. Maybe go back to the homepage?</p>
+        <button class="btn btn-outlines text-white"><a href="/">Return home</a></button>
+      </div>
+    </div>
+    <div class="bg-gray-600">
+      <img src="{{ 'assets/dist/images/404.svg'|theme }}" class="lg:h-full mx-auto" alt="page can't be found">
+    </div>
+</div>

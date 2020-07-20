@@ -1,0 +1,26 @@
+.stripe-loading-indicator .stripe,
+.stripe-loading-indicator .stripe-loaded {
+  @apply bg-primary !important;
+}
+
+.container {
+  @apply w-full;
+}
+
+@screen sm {
+  .container {
+    @apply max-w-screen-sm;
+  }
+}
+
+@screen md {
+  .container {
+    @apply max-w-screen-md;
+  }
+}
+
+@screen xl {
+  .container {
+    @apply max-w-screen-lg;
+  }
+}

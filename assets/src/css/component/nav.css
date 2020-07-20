@@ -1,0 +1,72 @@
+.nav-item {
+    @apply px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150;
+
+    &:focus {
+        @apply outline-none text-gray-900;
+    }
+}
+
+.nav-item-mob {
+    @apply py-3 px-4 text-base font-medium text-3xl text-gray-500 transition ease-in-out duration-150;
+
+    &:hover {
+        @apply text-gray-900;
+    }
+
+    &:focus {
+        @apply outline-none text-gray-900;
+    }
+}
+
+.hover-grow {
+
+        &::after {
+            bottom: -16px;
+            content: '';
+            height: 4px;
+            opacity: 0;
+            transition: all .3s ease-in;
+            width: 0;
+        }
+
+        &:hover::after {
+            opacity: 1;
+            width: calc(100%);
+            @apply block absolute rounded bg-primary;
+        }
+
+        &:hover {
+            @apply text-tertiary;
+        }
+}
+
+.is-active {
+    @apply text-tertiary;
+
+        &::after {
+            bottom: -16px;
+            content: '';
+            height: 4px;
+            opacity: 1;
+            transition: all .3s ease-in;
+            width: 100%;
+            @apply block absolute rounded bg-primary;
+        }
+
+        &:hover {
+            @apply text-tertiary;
+        }
+}
+
+.no-scroll {
+    overflow: hidden;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .example::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE and Edge */
+    .example {
+      -ms-overflow-style: none;
+    }
+}

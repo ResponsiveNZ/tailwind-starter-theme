@@ -1,0 +1,28 @@
+.btn {
+    transition: all .2s ease-in;
+    @apply py-2 px-6 rounded shadow bg-white border border-solid border-white text-tertiary;
+
+    &:hover {
+        @apply bg-tertiary border-tertiary text-white;
+    }
+
+    &:focus {
+        @apply outline-none border-primary shadow-outline-green
+    }
+
+    &-primary {
+        @apply bg-primary border-primary text-white;
+    }
+
+    &-primary:hover {
+        @apply bg-tertiary border-tertiary;
+    }
+
+    &-outlines {
+        @apply bg-transparent border-tertiary text-tertiary;
+    }
+
+    &-outlines:hover {
+        @apply bg-tertiary border-tertiary text-white;
+    }
+}

@@ -1,0 +1,305 @@
+tabs:
+    fields:
+        # TAB: Basic info
+        website_name:
+            tab: Basic Info
+            label: Website Name
+            type: text
+            default: Tailwind Starter Theme
+
+        website_author:
+            tab: Basic Info
+            label: Author
+            type: text
+            default: Responsive
+
+        website_url:
+            tab: Basic Info
+            label: URL
+            type: text
+            default: https://responsiveweb.nz
+
+        description:
+            tab: Basic Info
+            label: Description
+            type: textarea
+            default: Custom OctoberCMS theme using TailwindCSS and Alpine.js
+
+        # TAB: COMPANY INFO
+        company_contact_title:
+            tab: Company Info
+            label: Title
+            type: text
+            default: Contact Info
+            span: left
+
+        company_address:
+            tab: Company Info
+            label: Address
+            type: text
+            default: Your company address
+            span: right
+
+        company_contact_number:
+            tab: Company Info
+            label: Contact Number
+            type: text
+            default: 07 282 7187
+            span: left
+
+        company_email:
+            tab: Company Info
+            label: Email
+            type: text
+            default: email@domain.com
+            span: right
+
+        # TAB: SOCIAL
+        social_title:
+            tab: Social
+            label: Title
+            type: text
+            default: Follow us
+
+        social_facebook:
+            tab: Social
+            label: Facebook URL
+            type: text
+            span: left
+
+        social_twitter:
+            tab: Social
+            label: Twitter URL
+            type: text
+            span: right
+
+        social_instagram:
+            tab: Social
+            label: Instagram URL
+            type: text
+            span: left
+
+        social_linkedin:
+            tab: Social
+            label: LinkedIn URL
+            type: text
+            span: right
+
+        # TAB: HERO
+        hero_title:
+            tab: Hero
+            label: Title
+            type: text
+            default: Bacon ipsum dolor
+
+        hero_subtitle:
+            tab: Hero
+            label: Subtitle
+            type: text
+            default: Voluptate ball tip jerky ullamco dolore
+
+        hero_description:
+            tab: Hero
+            label: Description
+            type: textarea
+            default: Cillum ad deserunt chuck kielbasa sunt short ribs voluptate shank hamburger aliquip chicken.
+
+        hero_button_text:
+            tab: Hero
+            label: Button Text
+            type: text
+            default: Know more
+            span: left
+
+        hero_button_url:
+            tab: Hero
+            label: Button URL
+            type: text
+            span: right
+
+        hero_image:
+            tab: Hero
+            label: Hero Image
+            type: mediafinder
+            mode: image
+            imageWidth: 400
+
+        # TAB: ABOUT
+        about_title:
+            tab: About
+            label: Title
+            type: text
+            default: About us
+
+        about_description:
+            tab: About
+            label: Description
+            type: textarea
+            default: Tail aliquip labore pig sirloin pork prosciutto landjaeger ham, cupim adipisicing eiusmod sunt. Strip steak sausage shank kielbasa fatback pork belly.
+
+        about_image:
+            tab: About
+            label: About Image
+            type: mediafinder
+            mode: image
+            imageWidth: 400
+
+        about_items:
+            tab: About
+            label: About Items
+            titleFrom: title
+            prompt: Add new about item
+            type: repeater
+            form:
+                fields:
+                    icon:
+                        label: Icon (FontAwesome)
+                        type: text
+                        default: alarm_on
+                        span: left
+                    title:
+                        label: Title
+                        type: text
+                        default: About
+                        span: right
+                    description:
+                        label: Description
+                        type: textarea
+
+        # TAB: TESTIMONIALS
+        testimonial_title:
+            tab: Testimonial
+            label: Title
+            type: text
+            default: What our customers are saying
+
+        testimonial_description:
+            tab: Testimonial
+            label: Description
+            type: text
+            default: Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi repudiandae.
+
+        testimonials:
+            tab: Testimonial
+            label: Testimonials
+            titleFrom: name
+            prompt: Add new testimonial
+            type: repeater
+            form:
+                fields:
+                    name:
+                        label: Name
+                        type: text
+                        span: left
+                    company:
+                        label: Company
+                        type: text
+                        span: right
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 200
+                        span: left
+                    comment:
+                        label: Comment
+                        type: textarea
+                        span: right
+
+        # TAB: SERVICES
+        service_title:
+            tab: Services
+            label: Title
+            type: text
+            default: Services
+
+        services:
+            tab: Services
+            label: Services
+            titleFrom: title
+            prompt: Add new service
+            type: repeater
+            form:
+                fields:
+                    title:
+                        label: Name
+                        type: text
+                    image:
+                        label: Image
+                        type: mediafinder
+                        mode: image
+                        imageWidth: 200
+                        span: left
+                    description:
+                        label: Description
+                        type: textarea
+                        span: right
+        # TAB: PRICING
+        pricing_title:
+            tab: Pricing
+            label: Title
+            type: text
+            default: Pricing
+
+        pricing_plans:
+            tab: Pricing
+            label: Pricing Plans
+            titleFrom: plan_title
+            prompt: Add new plan
+            type: repeater
+            form:
+                fields:
+                    plan_title:
+                        label: Plan Title
+                        type: text
+                    currency:
+                        label: Currency
+                        type: text
+                        placeholder: $
+                        span: left
+                    price:
+                        label: Price
+                        type: text
+                        span: right
+                    plan_type:
+                        label: Plan Type
+                        type: text
+                        placeholder: mo/person/month
+                        span: left
+                    highlighted:
+                        label: Highlighted
+                        type: switch
+                        options:
+                            on: true
+                            off: false
+                        span: right
+                    plan_features:
+                        label: Features
+                        type: taglist
+                    button_text:
+                        label: Button Text
+                        type: text
+                        default: Subscribe
+                        span: left
+                    button_url:
+                        label: Button URL
+                        type: text
+                        span: right
+        # TAB: CONTACT
+        contact_title:
+            tab: Contact
+            label: Title
+            type: text
+            default: Contact
+
+        contact_description:
+            tab: Contact
+            label: Description
+            type: textarea
+
+        contact_image:
+            tab: Contact
+            label: Image
+            type: mediafinder
+            imageWidth: 400
+            mode: image

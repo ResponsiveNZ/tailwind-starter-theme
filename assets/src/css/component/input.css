@@ -1,0 +1,51 @@
+/* form inputs */
+.form-underline {
+
+  .input-group .input-field {
+     @apply appearance-none bg-transparent border-b border-primary text-tertiary mr-3 py-3 px-2 leading-tight;
+
+     &:focus {
+      @apply outline-none shadow-outline-green;
+     }
+
+     &:focus::placeholder {
+      @apply text-primary;
+     }
+  }
+}
+
+.form-bordered {
+
+  .input-group .input-field {
+     @apply appearance-none bg-transparent border border-gray-200 bg-gray-100 rounded text-tertiary mr-3 py-3 px-2 leading-tight;
+
+     &:focus {
+      @apply outline-none shadow-outline-green border-primary bg-transparent;
+     }
+
+     &:focus::placeholder {
+      @apply text-primary;
+     }
+  }
+}
+
+/* form validation */
+.error-message {
+  display: none;
+}
+
+.input-group.has-error .error-message {
+  @apply block;
+}
+
+.input-group.has-error .input-field {
+  @apply border-error bg-transparent !important;
+
+  &::placeholder {
+    @apply text-red-300 !important;
+  }
+  &:focus {
+    @apply shadow-outline-red;
+  }
+}
+

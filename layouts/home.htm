@@ -1,0 +1,24 @@
+description = "Default layout"
+
+[seoTags]
+==
+<!doctype html>
+<html lang="en">
+
+    <head>
+        {% partial 'site/meta' %}
+    </head>
+
+    <body>
+        <div class="h-screen">
+
+          <main class="container h-full flex items-center justify-center">
+              {% page %}
+          </main>
+
+        </div>
+
+        {% partial 'site/scripts' %}
+
+    </body>
+</html>
