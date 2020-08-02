@@ -1,7 +1,7 @@
 <footer class="bg-tertiary text-white">
     {% if this.theme.company_contact_title or this.theme.social_title %}
-    <div class="container section mx-auto py-12">
-        <div class="w-full mb-6 md:mb-0 px-4 md:w-3/4">
+    <div class="container section md:flex">
+        <div class="w-full mb-6 md:mb-0 px-4 md:w-1/3">
             <h4 class="text-lg font-bold mb-4">{{this.theme.company_contact_title }}</h4>
             <ul class="text-sm">
                 <li class="mb-2">
@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </div>
-        <div class="w-full mb-6 md:mb-0 px-4 md:w-3/4">
+        <div class="w-full mb-6 md:mb-0 px-4 md:w-1/3">
             <h4 class="text-lg font-bold mb-4">Menu Links</h4>
             <ul class="text-sm">
                 <li class="mb-2"><a class="hover:text-primary" href="#about">About</a></li>
@@ -38,7 +38,7 @@
                 <li class="mb-2"><a class="hover:text-primary" href="#pricing">Pricing</a></li>
             </ul>
         </div>
-        <div class="w-full mb-6 md:mb-0 px-4 md:w-3/4">
+        <div class="w-full mb-6 md:mb-0 px-4 md:w-1/3">
             <h4 class="text-lg font-bold mb-4">{{ this.theme.social_title }}</h4>
             <ul class="flex text-sm">
                 <li class="mb-2 mr-4">
