@@ -14,10 +14,10 @@
   "author": "'CJK.PL'",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.11.1",
     "@fullhuman/postcss-purgecss": "^2.1.2",
-    "autoprefixer": "^9.7.6",
-    "@babel/core": "^7.5.5",
-    "browser-sync": "^2.26.7",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.0.1",
     "laravel-mix": "^5.0.4",
     "laravel-mix-purgecss": "^5.0.0-rc.1",
@@ -28,12 +28,12 @@
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.4.0",
-    "alpinejs": "^2.4.1",
+    "alpinejs": "^2.5.0",
     "cross-env": "^7.0.2",
     "glider-js": "^1.7.3",
     "jquery": "^3.5.1",
-    "sal.js": "^0.7.6",
-    "tailwindcss": "^1.5.1",
+    "sal.js": "^0.7.7",
+    "tailwindcss": "^1.6.2",
     "vue": "^2.6.11"
   }
 }
