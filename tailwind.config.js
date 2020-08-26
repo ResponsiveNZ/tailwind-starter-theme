@@ -1,4 +1,7 @@
 module.exports = {
+    future: {
+    removeDeprecatedGapUtilities: true,
+    },
     purge: [
         './assets/src/**/*.vue',
         './layouts/**/*.htm',
