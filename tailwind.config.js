@@ -1,4 +1,10 @@
 module.exports = {
+    purge: [
+        './assets/src/**/*.vue',
+        './layouts/**/*.htm',
+        './pages/**/*.htm',
+        './partials/**/*.htm',
+    ],
     theme: {
         extend: {
             colors: {

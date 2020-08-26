@@ -43,3 +43,60 @@
 .html-content h5 {
     @apply text-xl
 }
+
+/*Rich custom editor styles*/
+.html-content {
+    /* Text */
+    .oc-text-gray {
+        @apply text-gray-500 !important;
+    }
+    .oc-text-bordered {
+        @apply border border-solid border-gray-900 border-l-0 border-r-0 py-3;
+    }
+    .oc-text-spaced {
+        @apply tracking-wide;
+    }
+    .oc-text-uppercase {
+        @apply uppercase;
+    }
+
+    /* Links */
+    a.oc-link-strong {
+        @apply font-bold;
+    }
+    a.oc-link-green {
+        @apply text-green-500;
+    }
+
+    /* Table */
+    table td,
+    table th {
+        /*border: solid 1px #222;*/
+        @apply border border-solid border-gray-900 px-2;
+    }
+    table.oc-dashed-borders td,
+    table.oc-dashed-borders th {
+        @apply border-dashed;
+    }
+    table.oc-alternate-rows tbody tr:nth-child(2n) {
+        @apply bg-gray-100;
+    }
+
+    /* Table cell */
+    table td.oc-cell-highlighted,
+    table th.oc-cell-highlighted {
+        @apply border border-double border-red-500;
+    }
+    table td.oc-cell-thick-border,
+    table th.oc-cell-thick-border {
+        @apply border-2;
+    }
+
+    /* Images */
+    img.oc-img-rounded {
+        @apply rounded-full bg-clip-padding;
+    }
+    img.oc-img-bordered {
+        @apply border border-solid border-8 border-gray-100 box-content;
+    }
+}
