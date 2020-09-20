@@ -14,7 +14,7 @@
   "author": "'CJK.PL'",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.11.4",
+    "@babel/core": "^7.11.6",
     "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.12",
     "browser-sync-webpack-plugin": "^2.0.1",
@@ -27,12 +27,12 @@
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.4.0",
-    "alpinejs": "^2.6.0",
+    "alpinejs": "^2.7.0",
     "cross-env": "^7.0.2",
     "glider-js": "^1.7.3",
     "jquery": "^3.5.1",
-    "sal.js": "^0.7.7",
-    "tailwindcss": "^1.7.3",
+    "sal.js": "^0.7.8",
+    "tailwindcss": "^1.8.10",
     "vue": "^2.6.12"
   }
 }
