@@ -99,4 +99,15 @@
     img.oc-img-bordered {
         @apply border border-solid border-8 border-gray-100 box-content;
     }
+    .fr-fir {
+        @apply mb-2 sm:float-right sm:inline-block sm:ml-2 !important;
+    }
+    .fr-fil {
+        @apply float-left inline-block mr-2 !important;
+    }
+    @media (max-width: 640px) {
+        .fr-fir, .fr-fil {
+            @apply w-full !important;
+        }
+    }
 }
