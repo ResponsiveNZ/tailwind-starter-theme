@@ -6,16 +6,20 @@
 
 @import "sal.js/dist/sal.css";
 
-@import "base/htmlcontent.css";
+@layout base {
+  @import "base/global.css";
 
-@import "component/buttons.css";
+  @import "base/section.css";
 
-@import "component/nav.css";
+  @import "base/htmlcontent.css";
 
-@import "base/global.css";
+  @import "base/typography.css";
+}
 
-@import "component/input.css";
+@layout components {
+  @import "component/input.css";
 
-@import "base/section.css";
+  @import "component/buttons.css";
 
-@import "base/typography.css";
+  @import "component/nav.css";
+}

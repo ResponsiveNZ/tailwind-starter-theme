@@ -2,11 +2,7 @@
 .form-underline {
 
   .input-group .input-field {
-     @apply appearance-none bg-transparent border-b border-primary text-tertiary mr-3 py-3 px-2 leading-tight;
-
-     &:focus {
-      @apply outline-none shadow-outline-green;
-     }
+     @apply appearance-none bg-transparent border-0 border-b border-primary text-tertiary mr-3 py-3 px-2 leading-tight focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50;
 
      &:focus::placeholder {
       @apply text-primary;
@@ -17,11 +13,7 @@
 .form-bordered {
 
   .input-group .input-field {
-     @apply appearance-none bg-transparent border border-gray-200 bg-gray-100 rounded text-tertiary mr-3 py-3 px-2 leading-tight;
-
-     &:focus {
-      @apply outline-none shadow-outline-green border-primary bg-transparent;
-     }
+     @apply appearance-none bg-transparent border border-gray-200 bg-gray-100 rounded text-tertiary mr-3 py-3 px-2 leading-tight focus:outline-none focus:ring focus:ring-primary focus:ring-opacity-50 focus:border-primary focus:bg-transparent;
 
      &:focus::placeholder {
       @apply text-primary;
@@ -39,13 +31,10 @@
 }
 
 .input-group.has-error .input-field {
-  @apply border-error bg-transparent !important;
+  @apply border-error bg-transparent focus:ring focus:ring-red-300;
 
   &::placeholder {
     @apply text-red-300 !important;
-  }
-  &:focus {
-    @apply shadow-outline-red;
   }
 }
 

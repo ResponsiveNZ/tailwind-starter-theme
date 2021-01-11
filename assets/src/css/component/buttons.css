@@ -1,28 +1,11 @@
 .btn {
-    transition: all .2s ease-in;
-    @apply py-2 px-6 rounded shadow bg-white border border-solid border-white text-tertiary;
-
-    &:hover {
-        @apply bg-tertiary border-tertiary text-white;
-    }
-
-    &:focus {
-        @apply outline-none border-primary shadow-outline-green
-    }
+    @apply py-2 px-6 rounded shadow bg-white border border-solid border-white text-tertiary transition duration-200 ease-in-out hover:bg-tertiary hover:border-tertiary hover:text-white focus:outline-none focus:border-primary focus:ring focus:ring-primary focus:ring-opacity-50;
 
     &-primary {
-        @apply bg-primary border-primary text-white;
-    }
-
-    &-primary:hover {
-        @apply bg-tertiary border-tertiary;
+        @apply bg-primary border-primary text-white hover:bg-tertiary hover:border-tertiary;
     }
 
     &-outlines {
-        @apply bg-transparent border-tertiary text-tertiary;
-    }
-
-    &-outlines:hover {
-        @apply bg-tertiary border-tertiary text-white;
+        @apply bg-transparent border-tertiary text-tertiary hover:bg-tertiary hover:border-tertiary hover:text-white;
     }
 }
