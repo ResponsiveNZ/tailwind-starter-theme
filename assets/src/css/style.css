@@ -9,8 +9,6 @@
 @layout base {
   @import "base/global.css";
 
-  @import "base/section.css";
-
   @import "base/htmlcontent.css";
 
   @import "base/typography.css";

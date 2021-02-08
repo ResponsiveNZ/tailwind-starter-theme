@@ -33,8 +33,8 @@ $(document).ready(function () {
 
     // initialise sal.js
     sal({
-      threshold: 1,
-      once: false,
+      threshold: 0.25,
+      once: true,
     });
 
     // Glider Carousel

@@ -44,14 +44,14 @@ default = 0
 
           {% partial  'site/header' %}
 
-          <main class="container py-20">
+          <main class="container py-20 html-content">
 
-              <div class="section">
-                <h1 class="section-title">{{ this.page.title }}</h1>
+              <div>
+                <h1>{{ this.page.title }}</h1>
                 {% page %}
               </div>
 
-              <div class="section">
+              <div>
               {% if page.title == "Contact Us" %}
                 {% partial 'page/contact' %}
               {% endif %}
