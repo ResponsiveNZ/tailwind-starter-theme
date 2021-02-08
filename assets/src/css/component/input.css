@@ -23,7 +23,7 @@
 
 /* form validation */
 .error-message {
-  display: none;
+  @apply hidden;
 }
 
 .input-group.has-error .error-message {
