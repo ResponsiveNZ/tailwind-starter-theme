@@ -41,10 +41,10 @@ categoryPage = "blog/category"
 
     <!-- Category Filter -->
     {% if blogCategories.categories|length > 0 %}
-        <div class="flex justify-center mt-6">
+        <div class="flex justify-center space-x-2 mt-6">
             {% for category in categories %}
                 {% set postCount = category.post_count %}
-                    <a href="{{ category.url }}" {% if category.slug == currentCategorySlug %}class="btn btn-primary mr-2"{% else %}class="btn btn-outlines mr-2"{% endif %}>{{ category.name }}
+                    <a href="{{ category.url }}" {% if category.slug == currentCategorySlug %}class="btn btn-primary"{% else %}class="btn btn-outlines"{% endif %}>{{ category.name }}
                     {% if postCount %}
                         <span class="rounded-full px-1 ml-1 bg-text text-white">{{ postCount }}</span>
                     {% endif %}

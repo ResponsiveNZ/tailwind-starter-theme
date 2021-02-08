@@ -19,9 +19,6 @@
 
 .html-content a {
     @apply text-primary;
-    border-bottom-width: 1px;
-    border-bottom-style: dotted;
-    border-bottom-color: gray;
 }
 
 .html-content h1 {
