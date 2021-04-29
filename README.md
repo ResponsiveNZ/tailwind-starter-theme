@@ -6,13 +6,14 @@ The October AJAX framework may be useful - therefore in `partials/site/scripts.h
 ## Features
 - System pages, contact page, blog
 - Easy to customise colors - all colors are defined in `tailwind.config.js`
-- Additional css files to restore minimal formatting - see below for details
+- Additional css files to restore rich editor styles - see below for details
 - Uses laravel-mix
+- Tailwind JIT mode for super small CSS file in development
 - Hot-reload for easy theme and site development
 - Loaded with Alpine.js, Glider.js and Sal.js
 
 ### Theme Options
-Basic website and company info, social, plus home sections is required.
+Basic website and company info, social media links.
 
 ### Theme Colors
 The theme uses a limited color selection. In the file `tailwind.config.js` you can find custom theme colours: primary, secondary and tertiary, plus white, error and transparent.
@@ -39,8 +40,8 @@ npm run watch
 ```
 you can open your site with hot-reload at http://yourdomain:3000
 
-### Optional CSS: htmlcontent.css
-I found it useful to restore basic formatting options after normalize.css removes all formatting. This css file contains a couple of basic formatting options that will be applied to any DOM element with a class `.html-content`. The way I use it - and thus included in the theme - is by adding the class `.html-content` to any divs where user-generated content may appear (e.g. blog posts, comments). At some point I may switch this out for Tailwind's build in 'prose' utility.
+### Optional CSS: base/rich-editor.css
+The '.prose' utility handles general styling of dynamic html elements. This css file contains styling specific to October's rich editor, that will be applied to any DOM element with a class `.rich-editor`. The way I use it - and thus included in the theme - is by adding the class `.rich-editor` to any divs where user-generated content may appear (e.g. blog posts, comments). This will take care of any of the rich editor specific options e.g. paragraph outlines, table highlighting. 
 
 
 ### Production build
