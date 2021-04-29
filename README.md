@@ -41,7 +41,7 @@ npm run watch
 you can open your site with hot-reload at http://yourdomain:3000
 
 ### Optional CSS: base/rich-editor.css
-The '.prose' utility handles general styling of dynamic html elements. This css file contains styling specific to October's rich editor, that will be applied to any DOM element with a class `.rich-editor`. The way I use it - and thus included in the theme - is by adding the class `.rich-editor` to any divs where user-generated content may appear (e.g. blog posts, comments). This will take care of any of the rich editor specific options e.g. paragraph outlines, table highlighting. 
+The .prose utility handles general styling of dynamic html elements. This css file contains styling specific to October's rich editor, that will be applied to any DOM element with a class .rich-editor. The way I use it - and thus included in the theme - is by adding the class `.rich-editor` to any divs where user-generated content may appear (e.g. blog posts, comments). This will take care of any of the rich editor specific options e.g. paragraph outlines, table highlighting. 
 
 
 ### Production build
