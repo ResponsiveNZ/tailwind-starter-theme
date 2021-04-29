@@ -1,48 +1,5 @@
-.html-content {
-    @apply text-left;
-    @apply leading-relaxed;
-}
-
-.html-content p {
-    padding-bottom: 0.5em;
-}
-
-.html-content ul {
-    @apply list-disc;
-    @apply list-inside;
-}
-
-.html-content ol {
-    @apply list-decimal;
-    @apply list-inside;
-}
-
-.html-content a {
-    @apply text-primary;
-}
-
-.html-content h1 {
-    @apply text-4xl
-}
-
-.html-content h2 {
-    @apply text-3xl
-}
-
-.html-content h3 {
-    @apply text-3xl
-}
-
-.html-content h4 {
-    @apply text-2xl
-}
-
-.html-content h5 {
-    @apply text-xl
-}
-
 /*Rich custom editor styles*/
-.html-content {
+.rich-editor {
     /* Text */
     .oc-text-gray {
         @apply text-gray-500 !important;
@@ -68,8 +25,7 @@
     /* Table */
     table td,
     table th {
-        /*border: solid 1px #222;*/
-        @apply border border-solid border-gray-900 px-2;
+        @apply border border-solid border-gray-400 px-3 !important;
     }
     table.oc-dashed-borders td,
     table.oc-dashed-borders th {
@@ -96,11 +52,14 @@
     img.oc-img-bordered {
         @apply border border-solid border-8 border-gray-100 box-content;
     }
+    .fr-fic {
+        @apply float-none block my-1 mx-auto !important;
+    }
     .fr-fir {
-        @apply mb-2 sm:float-right sm:inline-block sm:ml-2 !important;
+        @apply my-4 sm:float-right sm:inline-block sm:ml-2 !important;
     }
     .fr-fil {
-        @apply float-left inline-block mr-2 !important;
+        @apply my-4 float-left inline-block mr-2 !important;
     }
     @media (max-width: 640px) {
         .fr-fir, .fr-fil {

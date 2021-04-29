@@ -1,15 +1,15 @@
 {
-  "name": "tabularasa",
+  "name": "responsive",
   "version": "1.0.0",
-  "description": "A simplest TailwindCss boilerplate theme - see git+https://github.com/cjkpl/oc-tabularas-theme",
+  "description": "TailwindCSS starter theme - based on git+https://github.com/cjkpl/oc-tabularas-theme",
   "main": "app.js",
   "scripts": {
     "dev": "npm run development",
-    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "npm run development -- --watch",
     "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
     "prod": "npm run production",
-    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "author": "'CJK.PL'",
   "license": "MIT",

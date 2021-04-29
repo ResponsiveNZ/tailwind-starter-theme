@@ -5,7 +5,7 @@ rules[name] = "required"
 rules[email] = "required|email"
 rules[message] = "required"
 rules_messages[name.required] = "Please provide your full name"
-rules_messages[email.required] = "Pease provide your email address"
+rules_messages[email.required] = "Please provide your email address"
 rules_messages[email.email] = "Please provide a valid email address"
 rules_messages[message.required] = "Do you want to ask us something?"
 messages_success = "Thanks! We have sent your message and will come back to you shortly."
@@ -44,14 +44,14 @@ default = 0
 
           {% partial  'site/header' %}
 
-          <main class="container py-20 html-content">
+          <main class="container py-20">
 
-              <div>
+              <div class="max-w-5xl mx-auto prose md:prose-md lg:prose-lg rich-editor">
                 <h1>{{ this.page.title }}</h1>
                 {% page %}
               </div>
 
-              <div>
+              <div class="max-w-5xl mx-auto">
               {% if page.title == "Contact Us" %}
                 {% partial 'page/contact' %}
               {% endif %}

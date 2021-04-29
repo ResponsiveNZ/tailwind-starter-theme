@@ -1,4 +1,5 @@
 module.exports = {
+    mode: 'jit',
     purge: [
         './assets/src/**/*.vue',
         './layouts/**/*.htm',

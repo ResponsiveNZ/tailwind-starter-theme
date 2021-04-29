@@ -31,7 +31,7 @@ categoryPage = "blog/category"
 
   <div class="relative max-w-7xl mx-auto">
 
-    <h1 class="text-center">{{ this.page.title }}</h1>
+    <h1 class="font-extrabold text-4xl text-center">{{ this.page.title }}</h1>
 
     <div class="text-center">
       <p class="max-w-2xl mx-auto text-xl leading-7 text-gray-500 sm:mt-4">
@@ -44,9 +44,9 @@ categoryPage = "blog/category"
         <div class="flex justify-center space-x-2 mt-6">
             {% for category in categories %}
                 {% set postCount = category.post_count %}
-                    <a href="{{ category.url }}" {% if category.slug == currentCategorySlug %}class="btn btn-primary"{% else %}class="btn btn-outlines"{% endif %}>{{ category.name }}
+                    <a href="{{ category.url }}" {% if category.slug == currentCategorySlug %}class="group btn btn-primary"{% else %}class="group btn btn-outlines"{% endif %}>{{ category.name }}
                     {% if postCount %}
-                        <span class="rounded-full px-1 ml-1 bg-text text-white">{{ postCount }}</span>
+                        <span class="group-hover:text-white p-1 ml-1 bg-text text-tertiary text-center">{{ postCount }}</span>
                     {% endif %}
                     </a>
             {% endfor %}
