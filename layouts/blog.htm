@@ -1,9 +1,12 @@
 description = "Blog page template"
+
+[seo]
 ==
 <!doctype html>
 <html lang="en">
     <head>
         {% partial 'site/meta' %}
+        {% component 'seo' %}
     </head>
 
     <body class="font-body">
