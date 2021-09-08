@@ -1,23 +1,11 @@
 .nav-item {
 
-    @apply px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150;
-
-    &:focus {
-        @apply outline-none text-gray-900;
-    }
+    @apply px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900;
 }
 
 .nav-item-mob {
 
-    @apply py-3 px-4 text-base font-medium text-3xl text-gray-500 transition ease-in-out duration-150;
-
-    &:hover {
-        @apply text-gray-900;
-    }
-
-    &:focus {
-        @apply outline-none text-gray-900;
-    }
+    @apply py-3 px-4 text-base font-medium text-3xl text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900;
 }
 
 .hover-grow {

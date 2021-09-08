@@ -25,6 +25,18 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Submenu Item'
+                nesting: 0
+                type: static-page
+                code: ''
+                reference: contact-us
+                replace: 0
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
     -
         title: Contact
         nesting: '0'
@@ -38,4 +50,14 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+        items:
+            -
+                title: 'Submenu Item'
+                type: url
+                url: '#'
+                code: ''
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
 name: 'Main Nav'
