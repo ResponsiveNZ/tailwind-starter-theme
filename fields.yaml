@@ -86,6 +86,14 @@ tabs:
             imageWidth: 200
             span: left
 
+        site_icon:
+            tab: Company Info
+            label: Site Icon
+            type: mediafinder
+            mode: image
+            imageWidth: 200
+            span: right
+
         # TAB: SOCIAL
         social_title:
             tab: Social
