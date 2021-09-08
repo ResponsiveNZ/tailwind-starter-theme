@@ -17,7 +17,7 @@ code = "main-nav"
 
     <nav class="flex items-center space-x-6"
          x-data="{ dropMenu: null }"
-         @click.away="dropMenu = false"
+         @click.outside="dropMenu = false"
          >
 
       <!-- Nav item -->
