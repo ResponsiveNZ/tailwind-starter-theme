@@ -2,57 +2,89 @@ tabs:
     fields:
         # TAB: Basic info
         website_name:
-            tab: Basic Info
+            tab: Theme Info
             label: Website Name
             type: text
             default: Tailwind Starter Theme
 
         website_author:
-            tab: Basic Info
+            tab: Theme Info
             label: Author
             type: text
             default: Responsive
+            span: left
 
         website_url:
-            tab: Basic Info
+            tab: Theme Info
             label: URL
             type: text
             default: https://responsiveweb.nz
-
-        description:
-            tab: Basic Info
-            label: Description
-            type: textarea
-            default: Custom OctoberCMS theme using TailwindCSS and Alpine.js
+            span: right
 
         # TAB: COMPANY INFO
         company_contact_title:
             tab: Company Info
             label: Title
             type: text
-            default: Contact Info
-            span: left
-
-        company_address:
-            tab: Company Info
-            label: Address
-            type: text
-            default: Your company address
-            span: right
-
-        company_contact_number:
-            tab: Company Info
-            label: Contact Number
-            type: text
-            default: 07 282 7187
+            default:
             span: left
 
         company_email:
             tab: Company Info
             label: Email
             type: text
-            default: email@domain.com
+            default:
             span: right
+
+        company_address:
+            tab: Company Info
+            label: Address
+            type: text
+            default:
+            span: left
+
+        company_postal_address:
+            tab: Company Info
+            label: Postal Address
+            type: text
+            default:
+            span: right
+
+        company_location:
+            tab: Company Info
+            label: Business Location
+            type: text
+            default:
+            span: left
+
+        company_post_code:
+            tab: Company Info
+            label: Post Code
+            type: text
+            default:
+            span: right
+
+        company_contact_number:
+            tab: Company Info
+            label: Contact Number
+            type: text
+            default:
+            span: left
+
+        company_freephone_number:
+            tab: Company Info
+            label: Free Phone Number
+            type: text
+            default:
+            span: right
+
+        company_logo:
+            tab: Company Info
+            label: Business Logo
+            type: mediafinder
+            mode: image
+            imageWidth: 200
+            span: left
 
         # TAB: SOCIAL
         social_title:
