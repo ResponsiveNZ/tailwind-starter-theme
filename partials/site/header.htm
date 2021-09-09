@@ -11,7 +11,7 @@ code = "main-nav"
     <!-- Logo -->
     <div class="lg:w-0 lg:flex-1">
       <a href="/" class="flex">
-        <img class="h-14 w-auto" src="{{ 'assets/dist/images/favicon.png'|theme }}" alt="{{ this.theme.website_name }} logo" />
+        <img class="h-14 w-auto" src="{{ this.theme.company_logo|media }}" alt="{{ this.theme.website_name }} logo" />
       </a>
     </div>
 
@@ -105,7 +105,7 @@ code = "main-nav"
           <a href="/" class="flex"
              @click="isOpen = false"
              >
-            <img class="h-10 w-auto" src="{{ 'assets/dist/images/favicon.png'|theme }}" alt="logo" />
+            <img class="h-10 w-auto" src="{{ this.theme.company_logo|media }}" alt="logo" />
           </a>
         </div>
         <!-- Mobile nav button -->
