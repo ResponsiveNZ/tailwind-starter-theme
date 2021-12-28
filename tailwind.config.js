@@ -1,6 +1,5 @@
 module.exports = {
-    mode: 'jit',
-    purge: [
+    content: [
         './assets/src/**/*.vue',
         './layouts/**/*.htm',
         './pages/**/*.htm',
@@ -20,14 +19,6 @@ module.exports = {
                 'body': ['Roboto','sans-serif'],
                 'display': ['Roboto', 'sans-serif']
             },
-            inset: {
-                '-50': '-50%',
-                '50': '50%',
-                '-4': '-1rem',
-            },
-            boxShadow: {
-                xs: '0 0 0 1px rgba(0, 0, 0, 0.05)',
-            },
         },
         container: {
             center: true,
@@ -38,5 +29,6 @@ module.exports = {
         require('@tailwindcss/typography'),
         require('@tailwindcss/forms'),
         require('@tailwindcss/aspect-ratio'),
+        require('@tailwindcss/line-clamp'),
     ]
 }
