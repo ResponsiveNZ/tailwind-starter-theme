@@ -24,7 +24,8 @@ code = "main-nav"
       <!-- Nav item -->
       {% if staticMenu.menuItems %}
 
-      {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}
+      {% for item in staticMenu.menuItems %}
+      {% if not item.viewBag.isHidden %}
 
       {% if not item.items %}
       <div role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
@@ -72,13 +73,15 @@ code = "main-nav"
               <div class="rounded-lg shadow-lg w-32">
                 <div class="rounded-lg shadow-xs overflow-hidden">
                   <div class="z-20 relative bg-white">
-                    {% for subitem in item.items if not subitem.viewBag.isHidden %}
+                    {% for subitem in item.items %}
+                    {% if not subitem.viewBag.isHidden %}
                     <a href="{{ subitem.url }}"
                        {{ subitem.viewBag.isExternal ? 'target="_blank"' }}
                        class="py-2 pl-4 pr-8 block hover:bg-tertiary hover:text-white transition ease-in-out duration-150"
                        >
                         {{ subitem.title }}
                     </a>
+                    {% endif %}
                     {% endfor %}
                   </div>
                 </div>
@@ -87,7 +90,7 @@ code = "main-nav"
         </div>
         {% endif %}
       </div> <!-- Closing dropmenu -->
-
+    {% endif %}
     {% endfor %}
     {% endif %}
     </nav>
@@ -140,7 +143,8 @@ code = "main-nav"
              >
           <!-- Nav item -->
           {% if staticMenu.menuItems %}
-          {% for item in staticMenu.menuItems if not item.viewBag.isHidden %}
+          {% for item in staticMenu.menuItems %}
+          {% if not item.viewBag.isHidden %}
 
           {% if not item.items %}
           <div role="presentation" class="{{ item.isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
@@ -184,20 +188,23 @@ code = "main-nav"
                  x-transition:leave-end="opacity-0 translate-y-1"
                  @click.outside="subOpen = false"
                  @keydown.escape.window="subOpen = false"
-                 class="text-left">
-                {% for subitem in item.items if not subitem.viewBag.isHidden %}
+                 class="absolute text-left">
+                {% for subitem in item.items %}
+                {% if not subitem.viewBag.isHidden %}
                 <a href="{{ subitem.url }}"
                    {{ subitem.viewBag.isExternal ? 'target="_blank"' }}
-                   class="block ml-10 py-1 px-4 text-xl bg-gray-50 text-gray-400 transition ease-in-out duration-150"
+                   class="block ml-6 py-1 px-4 text-xl bg-gray-50 text-gray-400 transition ease-in-out duration-150"
                    @click="isOpen = false"
                    >
                     {{ subitem.title }}
                 </a>
+                {% endif %}
                 {% endfor %}
             </div>
             {% endif %}
 
           </div> <!-- Closing submenu -->
+        {% endif %}
         {% endfor %}
         {% endif %}
         </nav>
