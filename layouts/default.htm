@@ -1,36 +1,8 @@
 description = "Default layout"
 
-[genericForm contactForm]
-rules[name] = "required"
-rules[email] = "required|email"
-rules[message] = "required"
-rules_messages[name.required] = "Please provide your full name"
-rules_messages[email.required] = "Please provide your email address"
-rules_messages[email.email] = "Please provide a valid email address"
-rules_messages[message.required] = "Do you want to ask us something?"
-messages_success = "Thanks! We have sent your message and will come back to you shortly."
-messages_errors = "There were errors with your submission"
-messages_partial = "contactform/flash.htm"
-mail_enabled = 1
-mail_subject = "New website contact message"
-mail_recipients[] = "support@responsiveweb.nz"
-mail_replyto = "email"
-reset_form = 1
-inline_errors = "display"
-allowed_fields[] = "name"
-allowed_fields[] = "email"
-allowed_fields[] = "message"
-sanitize_data = "htmlspecialchars"
-anonymize_ip = "disabled"
-recaptcha_enabled = 1
-recaptcha_theme = "light"
-recaptcha_type = "image"
-recaptcha_size = "invisible"
-emails_date_format = "Y-m-d"
-
 [staticPage]
 useContent = 1
-default = 0
+default = 1
 
 [seo]
 ==
@@ -49,12 +21,6 @@ default = 0
               <div class="max-w-5xl mx-auto prose md:prose-md lg:prose-lg rich-editor">
                 <h1>{{ this.page.title }}</h1>
                 {% page %}
-              </div>
-
-              <div class="max-w-5xl mx-auto">
-              {% if page.title == "Contact Us" %}
-                {% partial 'page/contact' %}
-              {% endif %}
               </div>
 
           </main>
