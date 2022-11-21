@@ -11,12 +11,12 @@ mix.setPublicPath('./')
     .js('assets/src/js/app.js', 'assets/dist/js')
     .postCss('assets/src/css/style.css', 'assets/dist/css', postCssPlugins)
     .browserSync({
-        proxy: 'https://octobertw.app',
-        host: 'octobertw.app',
+        proxy: 'https://octoberstarter.app',
+        host: 'octoberstarter.app',
         open: 'external',
         https: {
-            key: '/Users/responsive/.config/valet/Certificates/octobertw.app.key',
-            cert: '/Users/responsive/.config/valet/Certificates/octobertw.app.crt',
+            key: '/Users/responsive/.config/valet/Certificates/octoberstarter.app.key',
+            cert: '/Users/responsive/.config/valet/Certificates/octoberstarter.app.crt',
         },
         files: [
             'layouts/**/*.htm',
