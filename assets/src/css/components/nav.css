@@ -1,13 +1,3 @@
-.nav-item {
-
-    @apply px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900;
-}
-
-.nav-item-mob {
-
-    @apply py-3 px-4 text-base font-medium text-3xl text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900;
-}
-
 .hover-grow {
 
     @apply relative;
@@ -32,19 +22,5 @@
 
     &::after {
         @apply absolute inset-x-0 -bottom-4 h-0.5 bg-primary;
-    }
-}
-
-.no-scroll {
-
-    overflow: hidden;
-    /* Hide scrollbar for Chrome, Safari and Opera */
-    .example::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Hide scrollbar for IE and Edge */
-    .example {
-      -ms-overflow-style: none;
     }
 }

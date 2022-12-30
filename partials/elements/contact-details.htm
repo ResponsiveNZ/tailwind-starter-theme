@@ -1,0 +1,23 @@
+{% if this.theme.company_address or this.theme.company_contact_number or this.theme.company_email %}
+<!-- Contact Details -->
+    {% if this.theme.company_contact_title %}
+    <h4 class="mb-2">{{this.theme.company_contact_title }}</h4>
+    {% endif %}
+    <ul class="text-sm">
+        {% if this.theme.company_address %}
+        <li class="mb-2">
+            <p class="text-sm w-full">{{ this.theme.company_address }}</p>
+        </li>
+        {% endif %}
+        {% if this.theme.company_contact_number %}
+        <li class="mb-2">
+            <p class="text-sm w-full"><a href="tel:{{ this.theme.company_contact_number }}">{{ this.theme.company_contact_number }}</a></p>
+        </li>
+        {% endif %}
+        {% if this.theme.company_email %}
+        <li class="mb-2 md:mb-0">
+            <p class="text-sm w-full"><a href="mailto:{{ this.theme.company_email }}">{{ this.theme.company_email }}</a></p>
+        </li>
+        {% endif %}
+    </ul>
+{% endif %}

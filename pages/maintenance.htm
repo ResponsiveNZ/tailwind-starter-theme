@@ -11,6 +11,9 @@ use_updated_at = "true"
 robot_index = "index"
 robot_follow = "follow"
 og_card = "summary-large-image"
+
+[staticMenu]
+code = "main-nav"
 ==
 <div class="h-screen grid grid-cols-1 lg:grid-cols-2">
     <div class="flex items-center justify-center flex-wrap">
@@ -23,3 +26,9 @@ og_card = "summary-large-image"
       <img src="{{ 'assets/dist/images/maintenance.svg'|theme }}" class="lg:h-full mx-auto" alt="page can't be found">
     </div>
 </div>
+
+{% if staticMenu.menuItems %}
+    <ul>
+        {% partial staticMenu ~ "::items" items=staticMenu.menuItems %}
+    </ul>
+{% endif %}

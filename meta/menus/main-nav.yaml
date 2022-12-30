@@ -14,29 +14,13 @@ items:
             isExternal: '0'
     -
         title: Blog
-        nesting: ''
         type: cms-page
-        url: ''
         code: ''
         reference: blog/blog
-        cmsPage: ''
-        replace: ''
         viewBag:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
-        items:
-            -
-                title: 'Contact Us'
-                nesting: 0
-                type: static-page
-                code: ''
-                reference: contact-us
-                replace: 0
-                viewBag:
-                    isHidden: '0'
-                    cssClass: ''
-                    isExternal: '0'
     -
         title: Contact
         nesting: '0'
@@ -50,4 +34,44 @@ items:
             isHidden: '0'
             cssClass: ''
             isExternal: '0'
+    -
+        title: 'Drop Menu'
+        nesting: null
+        type: url
+        url: '#'
+        code: ''
+        reference: null
+        cmsPage: null
+        replace: null
+        viewBag:
+            isHidden: '0'
+            cssClass: ''
+            isExternal: '0'
+        items:
+            -
+                title: 'Drop Menu Item'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
+            -
+                title: 'Another Drop Menu Item'
+                nesting: null
+                type: url
+                url: '#'
+                code: ''
+                reference: null
+                cmsPage: null
+                replace: null
+                viewBag:
+                    isHidden: '0'
+                    cssClass: ''
+                    isExternal: '0'
 name: 'Main Nav'

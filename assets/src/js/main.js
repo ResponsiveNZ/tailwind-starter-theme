@@ -18,14 +18,6 @@ $(document).ready(function () {
     //   }
     // });
 
-    // Disable scroll when mobile nav open
-    $('.btn-mob-nav').click(function(e) {
-        $('body').toggleClass('no-scroll');
-        $('a').click(function(e) {
-            $('body').removeClass('no-scroll');
-        })
-    });
-
 });
 
 //Write your javascript code here

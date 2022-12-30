@@ -38,3 +38,8 @@
   }
 }
 
+/* Hide reCaptcha badge */
+.grecaptcha-badge {
+  visibility: hidden;
+}
+

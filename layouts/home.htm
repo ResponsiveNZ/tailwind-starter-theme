@@ -1,5 +1,9 @@
 description = "Home page layout"
 
+[staticPage]
+useContent = 1
+default = 0
+
 [seo]
 ==
 <!doctype html>
@@ -12,8 +16,12 @@ description = "Home page layout"
     <body>
         <div class="h-screen">
 
-          <main class="container h-full flex items-center justify-center">
-              {% page %}
+          <main class="container max-w-7xl mx-auto h-full flex items-center justify-center">
+
+            <div class="max-w-none prose md:prose-md lg:prose-lg rich-editor prose-headings:font-thin">
+                {% page %}
+            </div>
+
           </main>
 
         </div>
