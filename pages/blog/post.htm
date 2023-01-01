@@ -26,9 +26,9 @@ function onEnd() {
 
   <div class="relative max-w-5xl mx-auto prose md:prose-md lg:prose-lg">
 
-    {% if post.custom_fields.featured_image %}
+    {% if post.metadata.featured_image %}
     <div class="w-full rounded-t-lg overflow-hidden">
-        <img src="{{ post.custom_fields.featured_image|media | resize(1280, 500, { mode: 'crop', quality: '60', extension: 'jpg' }) }}" alt="{{ post.custom_fields.featured_image_title }}, {{ post.custom_fields.featured_image_alt }}"/>
+        <img src="{{ post.metadata.featured_image|media | resize(1280, 500, { mode: 'crop', quality: '60', extension: 'jpg' }) }}" alt="{{ post.title }}, blog post image"/>
     </div>
     {% endif %}
 
@@ -36,7 +36,7 @@ function onEnd() {
         <h1>{{ this.page.title }}</h1>
 
         <div class="rich-editor">
-            {{ post.content_html|raw }}
+            {{ post.content|raw }}
         </div>
 
         <p class="mt-8 text-sm leading-5 font-medium text-gray-500">
