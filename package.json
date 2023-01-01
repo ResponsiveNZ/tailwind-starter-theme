@@ -32,6 +32,7 @@
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
+    "@alpinejs/focus": "^3.10.5",
     "alpinejs": "^3.0.0",
     "cross-env": "^7.0.3",
     "glider-js": "^1.7.3",

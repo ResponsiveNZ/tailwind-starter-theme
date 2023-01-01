@@ -60,7 +60,7 @@ categoryPage = "blog/category"
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <!-- Blog image -->
         <div class="flex-shrink-0">
-          <img class="h-48 w-full object-cover" src="{{ post.custom_fields.featured_image ? post.custom_fields.featured_image|media : 'assets/dist/images/blog-post.svg'|theme }}" alt="{{ post.custom_fields.featured_image_title }}, {{ post.custom_fields.featured_image_alt }}" />
+          <img class="h-48 w-full object-cover" src="{{ post.metadata.featured_image ? post.metadata.featured_image|media : 'assets/dist/images/blog-post.svg'|theme }}" alt="{{ post.title }} - blog post image" />
         </div>
         <!-- Content -->
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
