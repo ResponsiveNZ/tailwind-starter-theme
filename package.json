@@ -17,7 +17,6 @@
     "@babel/core": "^7.12.10",
     "@tailwindcss/aspect-ratio": "^0.4.0",
     "@tailwindcss/forms": "^0.4.0",
-    "@tailwindcss/line-clamp": "^0.3.0",
     "@tailwindcss/typography": "^0.5.0",
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.26.13",
@@ -28,18 +27,18 @@
     "postcss-import": "^12.0.1",
     "postcss-nested": "^4.2.1",
     "resolve-url-loader": "^5.0.0",
-    "tailwindcss": "^3.0.7",
+    "tailwindcss": "^3.3.2",
     "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
     "@alpinejs/focus": "^3.10.5",
-    "alpinejs": "^3.0.0",
+    "@splidejs/splide": "^4.1.4",
+    "@splidejs/splide-extension-auto-scroll": "^0.5.3",
+    "alpinejs": "^3.12.0",
     "cross-env": "^7.0.3",
-    "glider-js": "^1.7.3",
     "jquery": "^3.5.1",
     "lightbox2": "^2.11.3",
     "sal.js": "^0.7.8",
-    "slick-carousel": "^1.8.1",
     "vue": "^2.6.12"
   }
 }

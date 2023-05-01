@@ -6,6 +6,8 @@
 
 @import "sal.js/dist/sal.css";
 
+@import "@splidejs/splide/dist/css/splide.min.css";
+
 @layer base {
   @import "base/global.css";
   @import "base/richeditor.css";
