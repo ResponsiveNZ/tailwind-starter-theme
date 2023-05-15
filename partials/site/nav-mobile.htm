@@ -7,7 +7,7 @@ code = "main-nav"
 
     <!-- Logo -->
     <div class="lg:w-0 lg:flex-1">
-        <a href="/" class="flex"
+        <a href="{{ 'index'|staticPage }}" class="flex"
             @click="navOpen = false"
             >
         <img class="h-10 w-auto" src="{{ this.theme.company_logo|media }}" alt="logo" />

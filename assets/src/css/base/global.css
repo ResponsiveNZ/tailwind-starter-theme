@@ -1,5 +1,4 @@
-.stripe-loading-indicator .stripe,
-.stripe-loading-indicator .stripe-loaded {
+.oc-progress-bar {
   @apply bg-primary !important;
 }
 
