@@ -16,9 +16,9 @@
     }
 }
 
-.is-active {
+.active a, .child-active a {
 
-    @apply text-tertiary;
+    @apply text-primary;
 
     &::after {
         @apply absolute inset-x-0 -bottom-4 h-0.5 bg-primary;
