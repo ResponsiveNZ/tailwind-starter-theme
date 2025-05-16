@@ -2,7 +2,7 @@
 .rich-editor {
     /* Text */
     .oc-text-gray {
-        @apply text-gray-500 !important;
+        @apply text-gray-500!;
     }
     .oc-text-bordered {
         @apply border border-solid border-gray-900 border-l-0 border-r-0 py-3;
@@ -25,7 +25,7 @@
     /* Table */
     table td,
     table th {
-        @apply border border-solid border-gray-400 px-3 !important;
+        @apply border! border-solid! border-gray-400! px-3!;
     }
     table.oc-dashed-borders td,
     table.oc-dashed-borders th {
@@ -53,17 +53,17 @@
         @apply border border-solid border-8 border-gray-100 box-content;
     }
     .fr-fic {
-        @apply float-none block my-1 mx-auto !important;
+        @apply float-none! block! my-1! mx-auto!;
     }
     .fr-fir {
-        @apply my-4 sm:float-right sm:inline-block sm:ml-2 !important;
+        @apply my-4! sm:float-right! sm:inline-block! sm:ml-2!;
     }
     .fr-fil {
-        @apply my-4 float-left inline-block mr-2 !important;
+        @apply my-4! float-left! inline-block! mr-2!;
     }
     @media (max-width: 640px) {
         .fr-fir, .fr-fil {
-            @apply w-full !important;
+            @apply w-full!;
         }
     }
 }
