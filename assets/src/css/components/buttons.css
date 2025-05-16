@@ -1,5 +1,5 @@
 .btn {
-    @apply py-2 px-6 rounded-sm shadow-sm bg-white border border-solid border-white text-tertiary transition duration-200 ease-in-out hover:bg-tertiary hover:border-tertiary hover:text-white focus:outline-hidden focus:border-primary focus:ring-3 focus:ring-primary focus:ring-opacity/50;
+    @apply py-2 px-6 rounded-sm shadow-sm bg-white border border-solid border-white text-tertiary transition duration-200 ease-in-out hover:bg-tertiary hover:border-tertiary hover:text-white focus:outline-hidden focus:border-primary focus:ring-3 focus:ring-primary/50;
 
     &-primary {
         @apply bg-primary! border-primary! text-white! hover:bg-tertiary! hover:border-tertiary!;

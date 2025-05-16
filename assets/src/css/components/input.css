@@ -2,7 +2,7 @@
 .form-underline {
 
   .input-group .input-field {
-     @apply appearance-none bg-transparent border-0 border-b border-primary text-tertiary mr-3 py-3 px-2 leading-tight focus:outline-hidden focus:ring-3 focus:ring-primary focus:ring-opacity/50;
+     @apply appearance-none bg-transparent border-0 border-b border-primary text-tertiary mr-3 py-3 px-2 leading-tight focus:outline-hidden focus:ring-3 focus:ring-primary/50;
 
      &:focus::placeholder {
       @apply text-primary;
@@ -13,7 +13,7 @@
 .form-bordered {
 
   .input-group .input-field {
-     @apply appearance-none bg-transparent border border-gray-200 bg-gray-100 rounded-sm text-tertiary mr-3 py-3 px-2 leading-tight focus:outline-hidden focus:ring-3 focus:ring-primary focus:ring-opacity/50 focus:border-primary focus:bg-transparent;
+     @apply appearance-none bg-transparent border border-gray-200 bg-gray-100 rounded-sm text-tertiary mr-3 py-3 px-2 leading-tight focus:outline-hidden focus:ring-3 focus:ring-primary/50 focus:border-primary focus:bg-transparent;
 
      &:focus::placeholder {
       @apply text-primary;
