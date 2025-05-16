@@ -1,26 +1,26 @@
 .oc-progress-bar {
-  @apply bg-primary !important;
+  @apply bg-primary!;
 }
 
 .container {
   @apply w-full;
 }
 
-@screen sm {
+@media (width >= theme(--breakpoint-sm)) {
   .container {
-    @apply max-w-screen-sm;
+    @apply max-w-(--breakpoint-sm);
   }
 }
 
-@screen md {
+@media (width >= theme(--breakpoint-md)) {
   .container {
-    @apply max-w-screen-md;
+    @apply max-w-(--breakpoint-md);
   }
 }
 
-@screen xl {
+@media (width >= theme(--breakpoint-xl)) {
   .container {
-    @apply max-w-screen-lg;
+    @apply max-w-(--breakpoint-lg);
   }
 }
 
