@@ -1,0 +1,57 @@
+uuid: 69a378d7-6ca3-4627-846d-f76e76311c0c
+handle: Site\Menus
+type: entry
+name: Menu
+drafts: false
+pagefinder: false
+
+navigation:
+    label: Menus
+    icon: icon-sitemap
+    order: 10
+
+fields:
+    description:
+        label: Menu Description
+        type: textarea
+        size: small
+        tab: Description
+
+    items:
+        tab: Items
+        label: item
+        type: nesteditems
+        maxDepth: 3
+        span: adaptive
+        form:
+            fields:
+                title:
+                    label: Label
+                    type: text
+                use_icon:
+                    label: Use an icon?
+                    type: switch
+                icon:
+                    label: Icon
+                    type: dropdown
+                    options:
+                        - heroicons:home
+                        - heroicons:information-circle
+                        - heroicons:document
+                        - heroicons:phone
+                        - heroicons:user
+                        - heroicons:chart-bar
+                        - heroicons:cog
+                        - heroicons:star
+                        - heroicons:arrow-right
+                    trigger:
+                        action: show
+                        field: use_icon
+                        condition: checked
+                url:
+                    label: URL
+                    type: pagefinder
+                target:
+                    label: Open in new tab?
+                    type: switch
+                    default: false

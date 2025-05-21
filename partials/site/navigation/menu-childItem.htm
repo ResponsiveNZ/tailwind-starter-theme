@@ -1,0 +1,139 @@
+{# {% if item.children|length %}
+<div class="flex justify-center">
+    <div
+        x-data="{
+            subOpen: false,
+            toggle() {
+                if (this.subOpen) {
+                    return this.close()
+                }
+
+                this.$refs.button.focus()
+
+                this.subOpen = true
+            },
+            close(focusAfter) {
+                if (! this.subOpen) return
+
+                this.subOpen = false
+
+                focusAfter && focusAfter.focus()
+            }
+        }"
+        x-on:keydown.escape.prevent.stop="close($refs.button)"
+        x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+        x-id="['dropdown-button']"
+        class="relative">
+        <!-- Button -->
+        <button
+            x-ref="button"
+            x-on:click="toggle()"
+            :aria-expanded="subOpen"
+            :aria-controls="$id('dropdown-button')"
+            type="button"
+            class="px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150 focus:outline-none group flex justify-center items-center gap-2 hover:text-tertiary focus:text-gray-900 hover-grow {{ item.isActive ? 'text-tertiary' }} {{ item.isChildActive ? 'text-tertiary' }}">
+            <span>{{ item.title }}</span>
+
+            <!-- Heroicon: chevron-down -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 h-5 w-5 group-hover:text-tertiary group-focus:text-gray-900 transition ease-in-out duration-150" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
+
+        <!-- Panel -->
+        <div
+            x-ref="panel"
+            x-show="subOpen"
+            x-transition.origin.top.left
+            x-on:click.outside="close($refs.button)"
+            :id="$id('dropdown-button')"
+            style="display: none;"
+            class="z-10 absolute right-0 mt-2 w-48 rounded-md bg-white shadow-md">
+
+            {% for childItem in item.children %}
+            <a href="{{ childItem.url|link }}"
+                {{ childItem.target ? 'target="_blank"' }}
+                class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left lg:hover:bg-gray-50"
+                @click="subOpen = false">
+                {{ childItem.title }}
+            </a>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+{% endif %} #}
+
+
+
+
+<div role="menuitem">
+
+    <div class="flex justify-center">
+        <div
+            x-data="{
+                subOpen: false,
+                toggle() {
+                    if (this.subOpen) {
+                        return this.close()
+                    }
+
+                    this.$refs.button.focus()
+
+                    this.subOpen = true
+                },
+                close(focusAfter) {
+                    if (! this.subOpen) return
+
+                    this.subOpen = false
+
+                    focusAfter && focusAfter.focus()
+                }
+            }"
+            x-on:keydown.escape.prevent.stop="close($refs.button)"
+            x-on:focusin.window="! $refs.panel.contains($event.target) && close()"
+            x-id="['dropdown-button']"
+            class="relative">
+            <!-- Button -->
+            <button
+                x-ref="button"
+                x-on:click="toggle()"
+                :aria-expanded="subOpen"
+                :aria-controls="$id('dropdown-button')"
+                type="button"
+                class="px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150 focus:outline-none group flex justify-center items-center gap-2 hover:text-tertiary focus:text-gray-900 hover-grow{{ isActive ? ' is-active-parent' }}">
+                <span>{{ item.title }}</span>
+
+                <!-- Heroicon: chevron-down -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-400 h-5 w-5 group-hover:text-tertiary group-focus:text-gray-900 transition ease-in-out duration-150" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                </svg>
+            </button>
+
+            <!-- Panel -->
+            <div
+                x-ref="panel"
+                x-show="subOpen"
+                x-transition.origin.top.left
+                x-on:click.outside="close($refs.button)"
+                :id="$id('dropdown-button')"
+                style="display: none;"
+                class="z-10 absolute right-0 mt-2 w-48 rounded-md bg-white shadow-md">
+
+                {# Submenu #}
+                {% for childItem in item.children %}
+                    {% set childResolved = link(childItem.url) %}
+                    {% set childActive = childResolved.isActive %}
+
+                    <a href="{{ childResolved.url }}"
+                       {{ childItem.target ? 'target="_blank"' }}
+                       class="flex items-center gap-2 w-full first-of-type:rounded-t-md last-of-type:rounded-b-md px-4 py-2.5 text-left lg:hover:bg-gray-50 {{ childActive ? 'is-active-child' }}"
+                       @click="subOpen = false">
+                        {{ childItem.title }}
+                    </a>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+</div>

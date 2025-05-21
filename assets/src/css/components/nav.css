@@ -16,11 +16,16 @@
     }
 }
 
-.active a, .child-active a {
+.is-active, .is-active-parent {
 
     @apply text-primary;
 
     &::after {
         @apply absolute inset-x-0 -bottom-4 h-0.5 bg-primary;
     }
+}
+
+.is-active-child {
+
+    @apply text-primary;
 }

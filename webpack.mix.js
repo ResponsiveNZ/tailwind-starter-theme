@@ -2,8 +2,7 @@ const mix = require('laravel-mix');
 
 let postCssPlugins = [
     require('postcss-import'),
-    require('tailwindcss/nesting'),
-    require('tailwindcss'),
+    require('@tailwindcss/postcss'),
     require('autoprefixer')
 ];
 

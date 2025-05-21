@@ -1,0 +1,21 @@
+{# {% set resolved = link(item.url, { nesting: true }) %}
+{% set isActive = resolved.isActive %}
+
+{% if not item.children|length %}
+<div role="menuitem">
+    <a href="{{ resolved.url }}"
+    {{ item.target ? 'target="_blank"' }}
+    class="px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900 hover-grow {{ isActive ? 'is-active text-primary' }}">
+    {{ item.title }}
+    </a>
+</div>
+{% endif %} #}
+
+
+<div role="menuitem">
+    <a href="{{ resolved.url }}"
+       {{ item.target ? 'target="_blank"' }}
+       class="px-3 relative text-base font-medium text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900 hover-grow{{ isActive ? ' is-active' }}">
+        {{ item.title }}
+    </a>
+</div>

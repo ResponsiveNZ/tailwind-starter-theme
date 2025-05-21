@@ -1,0 +1,235 @@
+{# <!-- Mobile nav -->
+<div x-data="{ navOpen: false }" x-cloak class="md:hidden z-10 relative container px-4 py-6 flex justify-between" aria-labelledby="slide-over-title" role="dialog" aria-modal="true" @keydown.escape.prevent.stop="navOpen = false">
+
+    <!-- Logo -->
+    <div class="lg:w-0 lg:flex-1">
+        <a href="{{ 'index'|staticPage }}" class="flex"
+            @click="navOpen = false"
+            >
+        <img class="h-10 w-auto" src="{{ this.theme.company_logo|media }}" alt="logo" />
+        </a>
+    </div>
+
+    <!-- Trigger -->
+    <span @click="navOpen = true">
+        <button
+        type="button"
+        class="relative inline-flex items-center justify-center p-1.5 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+        <span class="sr-only">Open navigation</span>
+        <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+        </button>
+    </span>
+
+    <!-- Overlay -->
+    <div x-show="navOpen" x-transition.opacity class="fixed inset-0 bg-black/50"></div>
+    <!-- Panel -->
+    <div x-show="navOpen" class="fixed inset-0 overflow-hidden"
+         x-trap.noscroll.inert="navOpen"
+         style="display:none;">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full sm:pl-10">
+
+          <div x-show="navOpen" class="pointer-events-auto w-screen max-w-md" 
+               x-transition:enter="duration-300 sm:duration-500 ease-in"
+               x-transition:enter-start="translate-x-full"
+               x-transition:enter-end="translate-x-0"
+               x-transition:leave="duration-300 sm:duration-500 ease-out"
+               x-transition:leave-start="translate-x-0"
+               x-transition:leave-end="translate-x-full"
+               @click.away="navOpen = false">
+            <div class="flex h-full flex-col divide-y divide-gray-200 bg-white shadow-xl">
+              <div class="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
+                <div class="px-4 sm:px-6">
+                  <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="{{ 'index'|staticPage }}"
+                        class=""
+                        @click="navOpen = false">
+                        <img class="h-10 w-auto" src="{{ this.theme.company_logo|media }}" alt="{{ this.theme.website_name }}, {{ this.page.title }} ,logo" />
+                    </a>
+                    <!-- Title -->
+                    <h2 class="text-lg font-medium text-gray-900 sr-only" id="slide-over-title">Site Navigation</h2>
+                    <!-- Close button -->
+                    <div class="flex h-8 items-center">
+                      <button @click="navOpen = false" type="button" class="relative inline-flex items-center justify-center p-1.5 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+                        <span class="sr-only">Close navigation</span>
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="relative mt-6 flex-1 px-4 sm:px-6">
+
+                  <!-- Body -->
+                  <div class="p-4" aria-hidden="true">
+
+                    <!-- Menu -->
+                    <nav id="mobile-nav">
+
+                        {% set items = menu.items.toNested %}
+                        {% for item in items %}
+
+                        <!-- Menu item -->
+                        {% partial 'site/navigation/menu-mobile-menu-item' %}
+                        <!-- Mobile submenu -->
+                        {% partial 'site/navigation/menu-mobile-menu-childItem' %}
+
+                    {% endfor %}
+                    </nav>
+
+                    <!-- Company details -->
+                    <div class="mt-6 border-t pt-4 text-gray-400">
+                        {% partial 'elements/contact-details' %}
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <!-- Footer Section -->
+              <div class="flex shrink-0 justify-between items-center px-4 py-4">
+                <!-- Social buttons -->
+                {% partial 'elements/social-links' %}
+                <!-- Close button -->
+                <button @click="navOpen = false" type="button" class="btn btn-outlines">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> #}
+
+<!-- Mobile nav -->
+<div x-data="{ navOpen: false }" x-cloak class="md:hidden z-10 relative container px-4 py-6 flex justify-between" aria-labelledby="slide-over-title" role="dialog" aria-modal="true" @keydown.escape.prevent.stop="navOpen = false">
+
+    <!-- Logo -->
+    <div class="lg:w-0 lg:flex-1">
+        <a href="{{ 'index'|staticPage }}" class="flex"
+            @click="navOpen = false"
+            >
+        <img class="h-10 w-auto" src="{{ this.theme.company_logo|media }}" alt="logo" />
+        </a>
+    </div>
+
+    <!-- Trigger -->
+    <span @click="navOpen = true">
+        <button
+        type="button"
+        class="relative inline-flex items-center justify-center p-1.5 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+        <span class="sr-only">Open navigation</span>
+        <svg class="h-8 w-8 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+        </svg>
+        </button>
+    </span>
+
+    <!-- Overlay -->
+    <div x-show="navOpen" x-transition.opacity class="fixed inset-0 bg-black/50"></div>
+    <!-- Panel -->
+    <div x-show="navOpen" class="fixed inset-0 overflow-hidden"
+         x-trap.noscroll.inert="navOpen"
+         style="display:none;">
+      <div class="absolute inset-0 overflow-hidden">
+        <div class="pointer-events-none fixed inset-y-0 right-0 flex max-w-full sm:pl-10">
+
+          <div x-show="navOpen" class="pointer-events-auto w-screen max-w-md" 
+               x-transition:enter="duration-300 sm:duration-500 ease-in"
+               x-transition:enter-start="translate-x-full"
+               x-transition:enter-end="translate-x-0"
+               x-transition:leave="duration-300 sm:duration-500 ease-out"
+               x-transition:leave-start="translate-x-0"
+               x-transition:leave-end="translate-x-full"
+               @click.away="navOpen = false">
+            <div class="flex h-full flex-col divide-y divide-gray-200 bg-white shadow-xl">
+              <div class="flex min-h-0 flex-1 flex-col overflow-y-scroll py-6">
+                <div class="px-4 sm:px-6">
+                  <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="{{ 'index'|staticPage }}"
+                        class=""
+                        @click="navOpen = false">
+                        <img class="h-10 w-auto" src="{{ this.theme.company_logo|media }}" alt="{{ this.theme.website_name }}, {{ this.page.title }} ,logo" />
+                    </a>
+                    <!-- Title -->
+                    <h2 class="text-lg font-medium text-gray-900 sr-only" id="slide-over-title">Site Navigation</h2>
+                    <!-- Close button -->
+                    <div class="flex h-8 items-center">
+                      <button @click="navOpen = false" type="button" class="relative inline-flex items-center justify-center p-1.5 focus:outline-none focus:text-gray-500 transition duration-150 ease-in-out">
+                        <span class="sr-only">Close navigation</span>
+                        <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                      </button>
+                    </div>
+
+                  </div>
+                </div>
+                <div class="relative mt-6 flex-1 px-4 sm:px-6">
+
+                  <!-- Body -->
+                  <div class="p-4" aria-hidden="true">
+
+                    <!-- Menu -->
+                    <nav id="mobile-nav">
+
+                      {% set items = menu.items.toNested %}
+
+                      {% for item in items %}
+                          {% set resolved = link(item.url) %}
+                          {% set childIsActive = false %}
+
+                          {% if item.children is defined and item.children|length %}
+                              {% for child in item.children %}
+                                  {% if link(child.url).isActive %}
+                                      {% set childIsActive = true %}
+                                  {% endif %}
+                              {% endfor %}
+                          {% endif %}
+
+                          {% set isActive = resolved.isActive or childIsActive %}
+
+                          {% if not item.children|length %}
+
+                              <!-- Menu item -->
+                              {% partial 'site/navigation/menu-mobile-menu-item' %}
+
+                          {% else %}
+
+                              <!-- Mobile submenu -->
+                              {% partial 'site/navigation/menu-mobile-menu-childItem' %}
+                              
+                          {% endif %}
+                      {% endfor %}
+                    </nav>
+
+                    <!-- Company details -->
+                    <div class="mt-6 border-t pt-4 text-gray-400">
+                        {% partial 'elements/contact-details' %}
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <!-- Footer Section -->
+              <div class="flex shrink-0 justify-between items-center px-4 py-4">
+                <!-- Social buttons -->
+                {% partial 'elements/social-links' %}
+                <!-- Close button -->
+                <button @click="navOpen = false" type="button" class="btn btn-outlines">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
