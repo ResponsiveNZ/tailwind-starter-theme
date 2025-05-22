@@ -1,39 +1,5 @@
-{# <div class="container max-w-7xl mx-auto hidden md:flex justify-between items-center px-4 py-6">
-<!-- Desktop nav -->
-
-    <!-- Logo -->
-    <a href="{{ 'index'|staticPage }}" class="flex">
-        {% if this.theme.company_logo %}
-        <img class="h-14 w-auto" src="{{ this.theme.company_logo|media }}" alt="{{ this.theme.website_name }} logo" />
-        {% endif %}
-    </a>
-
-    <nav class="flex items-center space-x-6"
-            x-cloak
-            x-data="{ dropMenu: null }"
-            @click.outside="dropMenu = false"
-            >
-
-        <!-- Menu -->
-        {% set items = menu.items.toNested %}
-        {% for item in items %}
-        
-            <!-- Menu item -->
-            {% partial 'site/navigation/menu-item' %}
-            <!-- Menu item with submenu -->
-            {% partial 'site/navigation/menu-childItem' %}
-
-        {% endfor %}
-
-    </nav>
-</div> #}
-
-
-
-
 <div class="container max-w-7xl mx-auto hidden md:flex justify-between items-center px-4 py-6">
 <!-- Desktop nav -->
-
     <!-- Logo -->
     <a href="{{ 'index'|staticPage }}" class="flex">
         {% if this.theme.company_logo %}
@@ -46,36 +12,21 @@
          x-data="{ dropMenu: null }"
          @click.outside="dropMenu = false"
         >
-
         <!-- Menu -->
         {% set items = menu.items.toNested %}
 
-        {% for item in items %}
-            {% set resolved = link(item.url) %}
-            {% set childIsActive = false %}
+            {% for item in items %}
+                {% set resolved = link(item.url) %}
+                {% set childIsActive = item.children|default([])|filter(child => link(child.url).isActive)|length > 0 %}
+                {% set isActive = resolved.isActive or childIsActive %}
 
-            {% if item.children is defined and item.children|length %}
-                {% for child in item.children %}
-                    {% if link(child.url).isActive %}
-                        {% set childIsActive = true %}
-                    {% endif %}
-                {% endfor %}
-            {% endif %}
-
-            {% set isActive = resolved.isActive or childIsActive %}
-
-            {% if not item.children|length %}
-                
+                {% if not item.children|length %}
                     <!-- Menu item -->
                     {% partial 'site/navigation/menu-item' %}
-
-            {% else %}
-            
-                    <!-- Menu item with submenu -->
-                    {% partial 'site/navigation/menu-childItem' %}
-
-            {% endif %}
-        {% endfor %}
-
+                {% else %}         
+                        <!-- Menu item with submenu -->
+                        {% partial 'site/navigation/menu-childItem' %}
+                {% endif %}
+            {% endfor %}
     </nav>
 </div>

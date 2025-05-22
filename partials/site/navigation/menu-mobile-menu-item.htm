@@ -1,20 +1,8 @@
-{# {% if not item.children|length %}
-<div role="menuitem" class="{{ isActive ? 'active' : '' }} {{ item.isChildActive ? 'child-active' : '' }} {{ item.viewBag.cssClass }}">
-<a href="{{ item.url|link }}" {{ item.target ? 'target="_blank"' }}
-    class="py-3 font-medium text-xl text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900 inline-block"
-    @click="navOpen = false"
-    >
-    {{ item.title }}
-</a>
-{% endif %} #}
-
-
 <div role="menuitem">
     <a href="{{ resolved.url }}"
        {{ item.target ? 'target="_blank"' }}
         class="py-3 font-medium text-xl text-gray-500 transition ease-in-out duration-150 focus:outline-none focus:text-gray-900 inline-block{{ isActive ? ' text-primary' }}"
-        @click="navOpen = false"
-        >
+        @click="navOpen = false">
         {{ item.title }}
     </a>
 </div>

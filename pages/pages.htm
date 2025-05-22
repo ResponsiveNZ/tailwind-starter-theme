@@ -1,0 +1,20 @@
+url = "/:slug"
+layout = "default"
+title = "Pages"
+
+[section pages]
+handle = "Content\Pages"
+identifier = "slug"
+value = "{{ :slug }}"
+==
+<?php
+function onEnd() {
+    $this->page->title = $this['pages']->title;
+}
+?>
+==
+<main class="">
+    {% for block in pages.blocks %}
+        {% partial 'blocks/' ~ str_slug(block.type) block=block %}
+    {% endfor %}
+</main>

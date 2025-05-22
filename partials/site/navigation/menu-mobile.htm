@@ -182,16 +182,7 @@
 
                       {% for item in items %}
                           {% set resolved = link(item.url) %}
-                          {% set childIsActive = false %}
-
-                          {% if item.children is defined and item.children|length %}
-                              {% for child in item.children %}
-                                  {% if link(child.url).isActive %}
-                                      {% set childIsActive = true %}
-                                  {% endif %}
-                              {% endfor %}
-                          {% endif %}
-
+                          {% set childIsActive = item.children|default([])|filter(child => link(child.url).isActive)|length > 0 %}
                           {% set isActive = resolved.isActive or childIsActive %}
 
                           {% if not item.children|length %}

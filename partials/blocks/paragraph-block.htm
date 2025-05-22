@@ -1,0 +1,13 @@
+{% set blockImage = block.image ? block.image|media : 'assets/images/about-chart.png'|theme %}
+
+<div class="container py-3">
+    <h1>{{ block.title }}</h1>
+    <div class="grid md:grid-cols-3 gap-4">
+        <div class="col-span-2 columns-2">
+            {{ block.content|raw }}
+        </div>
+        <div class="col-span-1">
+            <img src="{{ blockImage }}" alt="" class="img-fluid" />
+        </div>
+    </div>
+</div>

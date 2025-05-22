@@ -1,0 +1,15 @@
+uuid: ac5af9bb-27fb-454b-ab79-a4c0cff74b10
+handle: Content\Pages
+type: entry
+name: Pages
+drafts: true
+
+navigation:
+    Label: Pages
+    icon: icon-pencil-square-o
+    order: 10
+
+fields:
+    block_builder:
+        type: mixin
+        source: BlockBuilder

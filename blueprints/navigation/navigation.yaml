@@ -8,20 +8,14 @@ pagefinder: false
 navigation:
     label: Menus
     icon: icon-sitemap
-    order: 10
+    order: 20
 
 fields:
-    description:
-        label: Menu Description
-        type: textarea
-        size: small
-        tab: Description
-
     items:
         tab: Items
         label: item
         type: nesteditems
-        maxDepth: 3
+        maxDepth: 2
         span: adaptive
         form:
             fields:
@@ -55,3 +49,9 @@ fields:
                     label: Open in new tab?
                     type: switch
                     default: false
+
+    description:
+        label: Menu Description
+        type: textarea
+        size: small
+        tab: Description
