@@ -1,0 +1,14 @@
+title = "Home"
+layout = "home"
+url = "/"
+
+[section homepage]
+handle = "Content\Homepage"
+identifier = "slug"
+value = "/"
+==
+<main class="">
+    {% for block in homepage.blocks %}
+        {% partial 'blocks/' ~ str_slug(block.type) block=block %}
+    {% endfor %}
+</main>

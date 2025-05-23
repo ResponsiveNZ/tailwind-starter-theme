@@ -1,0 +1,13 @@
+uuid: 3858aa4c-6eec-4a26-9c92-ffdb9e3a14db
+handle: Content\Homepage
+type: single
+name: Home Page
+
+navigation:
+    icon: icon-rocket
+    order: 5
+
+fields:
+    block_builder:
+        type: mixin
+        source: BlockBuilder
