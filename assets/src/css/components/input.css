@@ -21,25 +21,8 @@
   }
 }
 
-/* form validation */
-.error-message {
-  @apply hidden;
-}
-
-.input-group.has-error .error-message {
-  @apply block;
-}
-
-.input-group.has-error .input-field {
-  @apply border-error bg-transparent focus:ring-3 focus:ring-red-300;
-
-  &::placeholder {
-    @apply text-red-300!;
-  }
-}
-
 /* Hide reCaptcha badge */
-.grecaptcha-badge {
+/* .grecaptcha-badge {
   visibility: hidden;
-}
+} */
 

@@ -6,6 +6,38 @@ title = "Pages"
 handle = "Content\Pages"
 identifier = "slug"
 value = "{{ :slug }}"
+
+[uploadForm contactForm]
+group = "Contact form"
+rules[name] = "required"
+rules[email] = "required|email"
+rules_messages[name] = "Please provide your full name"
+rules_messages[email.required] = "Please provide your email address"
+rules_messages[email.email] = "Please provide a valid email address"
+messages_success = "Your form was successfully submitted"
+messages_errors = "There were errors with your submission"
+mail_enabled = 1
+mail_subject = "Contact Form"
+mail_recipients[] = "cy@responsiveweb.nz"
+mail_uploads = 1
+reset_form = 1
+feedback_mode = "flash"
+sanitize_data = "disabled"
+anonymize_ip = "disabled"
+recaptcha_enabled = 1
+recaptcha_theme = "light"
+recaptcha_type = "image"
+recaptcha_size = "invisible"
+emails_date_format = "Y-m-d"
+uploader_enable = 1
+uploader_label = "Drag & Drop your files or Browse"
+maxFiles = 1
+maxFileSize = "2MB"
+maxTotalSize = "5MB"
+fileTypes[application/pdf] = "pdf"
+fileTypes[application/zip] = "zip"
+fileTypes[image/png] = "png"
+fileTypes[image/jpeg] = "jpg"
 ==
 <?php
 function onEnd() {
@@ -17,4 +49,11 @@ function onEnd() {
     {% for block in pages.blocks %}
         {% partial 'blocks/' ~ str_slug(block.type) block=block %}
     {% endfor %}
+
+    {% if this.page.title == 'Contact Us' %}
+        <div class="max-w-5xl mx-auto">
+            {% partial 'page/contact' %}
+        </div>
+    {% endif %}
+
 </main>
