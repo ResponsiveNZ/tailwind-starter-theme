@@ -1,23 +1,6 @@
 $(document).ready(function () {
     // write your jquery code here
 
-    /* form validation classes
-    ------------------------------------------------------ */
-    $(window).on('ajaxInvalidField', function(event, fieldElement, fieldName, errorMsg, isFirst) {
-        $(fieldElement).closest('.input-group').addClass('has-error');
-    });
-
-    $('.input-field').keyup(function(event) {
-      $(this).parent('.input-group').removeClass('has-error');
-    });
-
-    // check boxes
-    // $('.form-check-input').on('change', function () {
-    //   if ($(this).prop('checked')) {
-    //       $('.error-message').removeClass('visible');
-    //   }
-    // });
-
 });
 
 //Write your javascript code here
